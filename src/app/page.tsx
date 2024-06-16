@@ -2,8 +2,9 @@ import Image from "next/image";
 import S from "./page.module.css";
 import { Form } from "./components/form/Form";
 import { ToDo } from "./components/todos/ToDosComponent";
+// import storage from '../../localStorage'; 
 
-export default function Home() {
+ const  Home: React.FC= () => {
   return (
     <main className={S.main}>
          <section className={S.sectionForm}>
@@ -19,3 +20,5 @@ export default function Home() {
     </main>
   );
 }
+
+export default Home

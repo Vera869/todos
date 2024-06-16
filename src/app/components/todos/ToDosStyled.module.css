@@ -1,16 +1,16 @@
-.sectionTodosItem{
+.todosItem{
    min-width: 250px;
    min-height: 250px;
    background-color: #fffdd0;
    border-radius: 20px;
    display: flex;
-   align-items: center;
+   align-items: flex-start;
    justify-content: flex-start;
    gap: 12px;
-   padding: 10px;
+   padding: 15px;
 }
 
-.sectionTodosCheckbox{
+.todosItemCheckbox{
    /* position: absolute;
      z-index: -1;
       opacity: 0; */
@@ -24,13 +24,22 @@
      background-color: aqua;  
    }
 
-.sectionTodosItems{
-   width: 20px;
-   height: 20px;
+.todosItemBox{
+   width: 200px;
+   height: auto;
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
    gap: 15px;
+}
+
+.todosItemTitle{
+   font-size: 24;
+   font-weight: bold;
+}
+
+.todosItemDescription{
+   font-size: 24;
 }
    
    
