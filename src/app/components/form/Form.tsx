@@ -1,24 +1,20 @@
 'use client'
-import { useEffect, useState } from 'react'
 import S from './FormStyled.module.css'
-import storage from '../../../../localStorage'; 
+import { setCurrentDescription, setCurrentTitle, setTodos } from '@/store/TodoSlice';
+import { useDispatch } from 'react-redux';
+
 
 export const Form: React.FC = () => {
-   let dataLS: any = storage.get('titleTodo')
-
-   const [title, setTitle] = useState(dataLS ?? '')
-   const [discription, setDiscription] = useState('')
+   const dispatch = useDispatch()
    
    const onFormSubmit = () => {
-      storage.set('titleTodo', title)
+      dispatch(setTodos(''))
    }
-   console.log(dataLS);
-   //console.log(title)
    return(
       <form className={S.form}>
-      <input className={S.formInputTitle} type='text' placeholder='Title' onChange={(e) => setTitle(e.target.value)}/>
-      <input className={S.formInputDiscription} type='text' placeholder='Discription' onChange={(e) => setDiscription(e.target.value)}/>
-      <button className={S.formButton} onClick={onFormSubmit}>Add task</button>
+      <input className={S.formInputTitle} type='text' placeholder='Title' onChange={(e) => dispatch(setCurrentTitle(e.target.value))}/>
+      <input className={S.formInputDiscription} type='text' placeholder='Description' onChange={(e) => dispatch(setCurrentDescription(e.target.value))}/>
+      <button className={S.formButton} onClick={onFormSubmit}>Add todo</button>
    </form>
    )
 }

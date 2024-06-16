@@ -30,7 +30,4 @@
 .sectionTodosHeader{
   font-size: 35px;
 }
-.sectionTodosItems{
-  display: flex;
-  gap: 12px;
-}
+
