@@ -40,11 +40,11 @@ const todosSlice = createSlice({
          
          // storage.set('todos', newTodos)
       },
-
+      
    }
 }
 )
 
-export const { setTodos, setCurrentTitle, setCurrentDescription, } = todosSlice.actions
+export const { setTodos, setCurrentTitle, setCurrentDescription} = todosSlice.actions
  
  export const todosReducer = todosSlice.reducer

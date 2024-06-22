@@ -1,12 +1,14 @@
-   /*  Основные цвета проекта: лаванда #c79fef беж #fffdd0 шоколад #55280c фисташка #bef574 */
+   /*  Основные цвета: лаванда #c79fef беж #fffdd0 шоколад #55280c фисташка #bef574 */
 .main {
   display: flex;
   flex-direction: column;
   min-width: 500px;
   min-height: 1000px;
+  align-items: center;
 }
 
 .sectionForm{
+  width: 500px;
   background-color: #fffdd0;
   border-radius: 20px;
   display: flex;

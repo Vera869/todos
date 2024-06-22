@@ -9,15 +9,7 @@ import storage from '../../localStorage';
 import { useEffect } from "react";
 
  const  Home: React.FC= () => {
-  // useEffect(()=> {
-  //   const firstTask = [{
-  //     id: 12345678910,
-  //     title: 'First task', 
-  //     description: 'Create a new task',
-  //     isCompleted: false
-  //  }]
-  //   storage.set('todos', firstTask)
-  // }, [])
+
 
   // console.log(dataTodos)
   // const removeLS: any = storage.remove('todos')
@@ -30,10 +22,8 @@ import { useEffect } from "react";
             <Form/>
           </section>
           <section className={S.sectionTodos}>
-              <h2 className={S.sectionTodosHeader}>My todo list</h2>
-              <div className={S.sectionTodosItems}>
-                <ToDo/>
-              </div>
+            <h2 className={S.sectionTodosHeader}>My todo list</h2>
+              <ToDo/>
           </section>
       </main>
     </Provider>
